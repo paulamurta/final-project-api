@@ -1,15 +1,15 @@
 import {
-  Entity,
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  OneToMany,
+  Entity,
+  ManyToOne,
 } from 'typeorm';
-import Contact from './contact.entity';
+import Client from './client.entity';
 
-@Entity('client')
-class Client {
+@Entity('contact')
+class Contact {
   @PrimaryGeneratedColumn('uuid')
   readonly id: string;
 
@@ -28,8 +28,8 @@ class Client {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  @OneToMany(() => Contact, (contact) => contact.client)
-  contact: Contact[];
+  @ManyToOne(() => Client, { eager: true })
+  client: Client;
 }
 
-export default Client;
+export default Contact;
