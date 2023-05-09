@@ -1,6 +1,6 @@
-import Client from '../entities/client.entity';
-import { IClientResponse } from '../interfaces/clients';
-import { AppDataSource } from '../data-source';
+import { AppDataSource } from '../../data-source';
+import Client from '../../entities/client.entity';
+import { IClientResponse } from '../../interfaces/clients';
 
 const listClientsService = async (): Promise<IClientResponse[]> => {
   const clientRepository = AppDataSource.getRepository(Client);

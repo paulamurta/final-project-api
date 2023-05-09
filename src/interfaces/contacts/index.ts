@@ -14,3 +14,10 @@ export interface IContactResponse {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface IClientUpdateRequest {
+  //o que o usuario fornece
+  name?: string;
+  email?: string;
+  password?: string;
+}

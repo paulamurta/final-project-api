@@ -1,7 +1,7 @@
-import Client from '../entities/client.entity';
-import { IClientRequest, IClientResponse } from '../interfaces/clients';
-import { AppDataSource } from '../data-source';
-import { AppError } from '../errors/appError';
+import Client from '../../entities/client.entity';
+import { IClientRequest, IClientResponse } from '../../interfaces/clients';
+import { AppDataSource } from '../../data-source';
+import { AppError } from '../../errors/appError';
 
 const createClientService = async ({
   name,
